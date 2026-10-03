@@ -1,0 +1,57 @@
+:root {
+  /* Paleta propia */
+  --color-primary: #0E5A5A;
+  --color-primary-dark: #0A4545;
+  --color-accent: #F2A33A;
+  --color-bg: #F6F7F5;
+  --color-text: #1F2A2E;
+
+  /* Estados */
+  --color-success: #2E9E5B;
+  --color-danger: #C0392B;
+
+  /* Tipografía */
+  --font-title: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Conectar nuestras variables con las de Bootstrap */
+  --bs-primary: var(--color-primary);
+  --bs-primary-rgb: 14, 90, 90;
+  --bs-body-bg: var(--color-bg);
+  --bs-body-color: var(--color-text);
+  --bs-body-font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-title);
+}
+
+.btn-primary {
+  --bs-btn-bg: var(--color-primary);
+  --bs-btn-border-color: var(--color-primary);
+  --bs-btn-hover-bg: var(--color-primary-dark);
+  --bs-btn-hover-border-color: var(--color-primary-dark);
+  --bs-btn-active-bg: var(--color-primary-dark);
+  --bs-btn-active-border-color: var(--color-primary-dark);
+  --bs-btn-disabled-bg: var(--color-primary);
+  --bs-btn-disabled-border-color: var(--color-primary);
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.15);
+}
+
+/* Etiquetas por tipo de sala */
+.badge-laboratorio { background-color: #7B4FA3; }
+.badge-auditorio { background-color: #D9822B; }
+.badge-estudio { background-color: #2F7FA8; }
+.badge-sala { background-color: #5C6B73; }
+
+/* Etiquetas de disponibilidad */
+.badge-disponible { background-color: var(--color-success); }
+.badge-ocupado { background-color: var(--color-danger); }
