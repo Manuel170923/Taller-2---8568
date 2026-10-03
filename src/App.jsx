@@ -1,10 +1,23 @@
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import Layout from './components/Layout'
+import Login from './pages/Login'
+import Salas from './pages/Salas'
+import MisReservas from './pages/MisReservas'
+
 function App() {
   return (
-    <div className="container mt-5 text-center">
-      <h1>Reserva de Espacios</h1>
-      <p>Texto de ejemplo con la fuente Inter.</p>
-      <button className="btn btn-primary">Solicitar reserva</button>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+
+        <Route element={<Layout />}>
+          <Route path="/salas" element={<Salas />} />
+          <Route path="/mis-reservas" element={<MisReservas />} />
+        </Route>
+
+        <Route path="*" element={<Navigate to="/salas" replace />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

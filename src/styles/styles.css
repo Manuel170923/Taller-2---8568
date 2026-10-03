@@ -45,3 +45,13 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(-6px);
   box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.15);
 }
+
+/* Etiquetas por tipo de sala */
+.badge-laboratorio { background-color: #7B4FA3; }
+.badge-auditorio { background-color: #D9822B; }
+.badge-estudio { background-color: #2F7FA8; }
+.badge-sala { background-color: #5C6B73; }
+
+/* Etiquetas de disponibilidad */
+.badge-disponible { background-color: var(--color-success); }
+.badge-ocupado { background-color: var(--color-danger); }
