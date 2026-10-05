@@ -1,0 +1,79 @@
+/* Estilos de login y navbar. Usa las variables de la paleta definidas en styles.css */
+:root {
+  --color-primary-soft: #d9ebe8;
+}
+
+/* ===== Navbar: contador, nombre de usuario y Cerrar sesión ===== */
+.badge-contador {
+  background: var(--color-accent);
+  color: var(--color-text);
+}
+
+.navbar-usuario {
+  color: #fff;
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+}
+
+.btn-salir {
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.btn-salir:hover {
+  background: #fff;
+  color: var(--color-primary);
+}
+
+/* ===== Login ===== */
+.login-pagina {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+.login-banda-superior {
+  background: var(--color-primary);
+  color: #fff;
+  padding: 2.5rem 1.5rem 3rem;
+  border-bottom-left-radius: 6rem; /* la curva del prototipo en Figma */
+}
+
+.login-banda-superior h1 {
+  font-size: clamp(1.5rem, 5vw, 2.25rem);
+  font-weight: 700;
+  margin: 0;
+}
+
+.login-banda-superior p {
+  margin: 0.25rem 0 0;
+  opacity: 0.85;
+}
+
+.login-banda-inferior {
+  flex: 1 1 5rem;
+  background: color-mix(in srgb, var(--color-accent) 35%, white);
+  border-top-right-radius: 6rem;
+}
+
+.login-form {
+  width: min(100% - 2rem, 26rem);
+  margin: 2rem auto;
+}
+
+.login-titulo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 767.98px) {
+  .login-banda-superior {
+    border-bottom-left-radius: 3rem;
+  }
+
+  .login-banda-inferior {
+    border-top-right-radius: 3rem;
+  }
+}
