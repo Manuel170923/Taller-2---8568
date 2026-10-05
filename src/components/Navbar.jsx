@@ -2,12 +2,13 @@ import { useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import Swal from 'sweetalert2'
 import { useAuth } from '../context/AuthContext'
+import { useReservas } from '../context/ReservasContext'
 
 function Navbar() {
   const [abierto, setAbierto] = useState(false)
   const { usuario, logout } = useAuth()
+  const { misReservas } = useReservas()
   const navigate = useNavigate()
-  
 
   const cerrarMenu = () => setAbierto(false)
 
@@ -42,7 +43,7 @@ function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-         <div className={`collapse navbar-collapse justify-content-end ${abierto ? 'show' : ''}`}>
+        <div className={`collapse navbar-collapse justify-content-end ${abierto ? 'show' : ''}`}>
           <ul className="navbar-nav align-items-lg-center gap-lg-2">
             <li className="nav-item">
               <NavLink to="/salas" className="nav-link" onClick={cerrarMenu}>
@@ -52,6 +53,11 @@ function Navbar() {
             <li className="nav-item">
               <NavLink to="/mis-reservas" className="nav-link" onClick={cerrarMenu}>
                 Mis reservas
+                {misReservas.length > 0 && (
+                  <span className="badge rounded-pill badge-contador ms-2">
+                    {misReservas.length}
+                  </span>
+                )}
               </NavLink>
             </li>
             <li className="nav-item navbar-usuario">{usuario.nombre}</li>
