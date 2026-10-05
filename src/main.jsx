@@ -3,13 +3,17 @@ import { createRoot } from 'react-dom/client'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './styles/styles.css'
 import './styles/auth.css'
+import './styles/reservas.css'
 import App from './App.jsx'
 import { AuthProvider } from './context/AuthContext'
+import { ReservasProvider } from './context/ReservasContext'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <AuthProvider>
-      <App />
+      <ReservasProvider>
+        <App />
+      </ReservasProvider>
     </AuthProvider>
   </StrictMode>,
 )
