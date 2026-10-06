@@ -106,15 +106,13 @@ function ReservationModal({ room, onCerrar }) {
             <label htmlFor="nombre" className="form-label">Nombre</label>
             <input
               id="nombre" name="nombre" className={'form-control' + (errores.nombre ? ' is-invalid' : '')}
-              value={form.nombre} onChange={handleChange} placeholder="Nombre completo"
-            />
+              value={form.nombre} onChange={handleChange} placeholder="Nombre completo" readOnly />
             <div className="invalid-feedback">{errores.nombre}</div>
 
             <label htmlFor="correo-reserva" className="form-label mt-3">Correo electrónico</label>
             <input
               id="correo-reserva" name="correo" type="email" className={'form-control' + (errores.correo ? ' is-invalid' : '')}
-              value={form.correo} onChange={handleChange} placeholder="correo@ejemplo.edu"
-            />
+              value={form.correo} onChange={handleChange} placeholder="correo@ejemplo.edu"readOnly/>
             <div className="invalid-feedback">{errores.correo}</div>
 
             <div className="row g-3 mt-0">

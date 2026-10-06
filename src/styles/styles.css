@@ -55,3 +55,14 @@ h1, h2, h3, h4, h5, h6 {
 /* Etiquetas de disponibilidad */
 .badge-disponible { background-color: var(--color-success); }
 .badge-ocupado { background-color: var(--color-danger); }
+
+/* Panel de filtros de la página de salas */
+.filtros-panel .form-select:focus,
+.filtros-panel .form-control:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 0.25rem rgba(14, 90, 90, 0.25);
+}
+
+.filtros-panel .btn-link {
+  color: var(--color-primary);
+}
