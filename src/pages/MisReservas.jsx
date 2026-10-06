@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import Swal from 'sweetalert2'
 import { useReservas } from '../context/ReservasContext'
 import { formatearFecha } from '../utils/fechas'
+import QRReserva from '../components/QRReserva'
 
 function MisReservas() {
   const { misReservas, cancelarReserva, cancelarTodas } = useReservas()
@@ -61,6 +62,7 @@ function MisReservas() {
                 <span>{r.edificio} · Piso {r.piso}</span>
                 <span>A nombre de {r.nombre}</span>
               </div>
+              <QRReserva reserva={r} />
               <div className="reserva-dato">
                 <small>Fecha</small>
                 <strong>{formatearFecha(r.fecha)}</strong>
