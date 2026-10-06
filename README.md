@@ -75,7 +75,7 @@ Para generar el hash de una nueva clave: `node scripts/generarHash.js MiClave123
 ```
 src/
 ├── components/   Navbar, Layout, RoomList, RoomCard,
-│                 ReservationModal, QRReserva, RutaProtegida
+│                 ReservationModal, QRReserva, RutaProtegida, FiltroSalas
 ├── pages/        Login, Salas, MisReservas
 ├── context/      AuthContext, ReservasContext
 ├── services/     authService, reservasStorage
